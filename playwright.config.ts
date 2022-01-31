@@ -52,22 +52,26 @@ const config: PlaywrightTestConfig = {
       /* Project-specific settings. */
       use: {
         ...devices['Desktop Chrome'],
+        headless: false,
+        viewport: { width: 1920, height: 1080 },
       },
     },
 
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-      },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: {
+    //     ...devices['Desktop Firefox'],
+    //     headless: false,
+    //   },
+    // },
 
-    {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-      },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: {
+    //     ...devices['Desktop Safari'],
+    //     headless: false,
+    //   },
+    // },
 
     /* Test against mobile viewports. */
     // {
